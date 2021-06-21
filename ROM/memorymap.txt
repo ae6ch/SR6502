@@ -1,0 +1,42 @@
+0000-5FFF - RAM  
+ $0000-$00FF ZP
+  $0000 inbuf_wptr  ; Location of next char to write to input buffer 
+  $0001	inbuf_rptr  ; Location of next char to read from input buffer
+  $0002	inbuf_flags ; unused
+
+	0010-00FF Stack
+	0200-02FF Input Buffer
+	0300-02FF BIOS Vectors (needs to be initialized at boot)
+	 00	RESET
+	 02	GETC
+	 04	GETLN
+	 06	PRINTC
+  	 08	PRINTLN
+6000-6FFF - IO 
+	6000-600F VIA1 (16x2 Display and Buttons)
+	ACIA (SCN2681?)
+	SOUND
+	VIDEO
+	SPI
+	I2C
+	RTC
+	
+	
+8000-FFFF - ROM
+	MONITOR
+	EHBASIC
+	Functions 
+		RESET
+		VIA1_INIT
+		SERIAL_INIT
+		
+		GETC
+		GETLN
+		PRINTC
+		PRINTLN
+
+	FFFA NMI Vector
+	FFFC RESET Vector
+	FFFE IRQ Vector
+
+

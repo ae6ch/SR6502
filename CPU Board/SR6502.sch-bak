@@ -1,12 +1,12 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A0 46811 33110
+$Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "SR6502 Mainboard"
+Date "2021-06-14"
+Rev "0"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -1624,6 +1624,8 @@ Wire Wire Line
 Connection ~ 9650 2850
 Wire Wire Line
 	9650 2850 9650 3850
+Text GLabel 9350 2750 2    50   Input ~ 0
+VCC
 Wire Bus Line
 	11850 3600 11850 3950
 Wire Bus Line
@@ -1642,6 +1644,4 @@ Wire Bus Line
 	4200 2850 4200 5000
 Wire Bus Line
 	2700 2850 2700 5000
-Text GLabel 9350 2750 2    50   Input ~ 0
-VCC
 $EndSCHEMATC
