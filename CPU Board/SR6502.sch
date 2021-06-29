@@ -37,17 +37,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf" H 3400 3650 50
 $EndComp
 $Comp
 L 74xx:74HC00 U3
-U 4 1 60C45A6C
-P 2050 6000
-F 0 "U3" H 2050 6325 50  0000 C CNN
-F 1 "74HC00" H 2050 6234 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2050 6000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 2050 6000 50  0001 C CNN
-	4    2050 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74HC00 U3
 U 3 1 60C56375
 P 4250 5900
 F 0 "U3" H 4250 6225 50  0000 C CNN
@@ -290,8 +279,6 @@ Entry Wire Line
 Entry Wire Line
 	5850 2750 5750 2650
 Connection ~ 4050 2300
-NoConn ~ 2450 4450
-NoConn ~ 2450 4550
 $Comp
 L power:GND #PWR07
 U 1 1 60D44050
@@ -576,13 +563,13 @@ Entry Wire Line
 Wire Bus Line
 	4050 2300 5750 2300
 Entry Wire Line
-	6150 2150 6250 2250
+	6000 2150 6100 2250
 Entry Wire Line
-	6150 2250 6250 2350
+	6000 2250 6100 2350
 Entry Wire Line
-	6150 2350 6250 2450
+	6000 2350 6100 2450
 Entry Wire Line
-	6150 2450 6250 2550
+	6000 2450 6100 2550
 Wire Wire Line
 	5850 2750 6250 2750
 Wire Wire Line
@@ -597,19 +584,11 @@ Wire Wire Line
 	5850 3250 6250 3250
 Wire Bus Line
 	2700 5000 4200 5000
-Wire Wire Line
-	6150 2150 6000 2150
-Wire Wire Line
-	6150 2250 6000 2250
-Wire Wire Line
-	6150 2350 6000 2350
-Wire Wire Line
-	6150 2450 6000 2450
-Text Label 6050 2150 0    50   ~ 0
+Text Label 6100 2250 0    50   ~ 0
 a0
-Text Label 6050 2250 0    50   ~ 0
+Text Label 6100 2350 0    50   ~ 0
 a1
-Text Label 6050 2450 0    50   ~ 0
+Text Label 6100 2550 0    50   ~ 0
 a3
 NoConn ~ 6250 2050
 NoConn ~ 6250 2150
@@ -637,12 +616,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6550 6050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6100 5950 6250 5950
-Wire Wire Line
-	1750 5900 1600 5900
-Wire Wire Line
-	1600 5900 1600 6000
-Wire Wire Line
-	1600 6100 1750 6100
 Entry Wire Line
 	1300 5900 1400 6000
 Wire Bus Line
@@ -651,14 +624,9 @@ Wire Bus Line
 	1300 5000 2700 5000
 Wire Wire Line
 	1400 6000 1600 6000
-Connection ~ 1600 6000
-Wire Wire Line
-	1600 6000 1600 6100
 Text Label 1400 6000 0    50   ~ 0
 a15
-Wire Wire Line
-	6100 3650 6250 3650
-Text Label 6100 3650 0    50   ~ 0
+Text Label 5900 3650 0    50   ~ 0
 a13
 Wire Wire Line
 	3800 6150 6250 6150
@@ -673,16 +641,6 @@ F 3 "" H 8550 5850 50  0001 C CNN
 	1    8550 5850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7550 3150 8550 3150
-Wire Wire Line
-	8550 3250 7550 3250
-Wire Wire Line
-	7550 3350 8550 3350
-Wire Wire Line
-	7550 3550 8550 3550
-Wire Wire Line
-	8550 3650 7550 3650
 Wire Wire Line
 	7950 2450 7950 2850
 Wire Wire Line
@@ -725,13 +683,7 @@ Wire Wire Line
 NoConn ~ 9650 2150
 Wire Wire Line
 	4300 4150 4500 4150
-Text Label 5550 3850 1    50   ~ 0
-a14
-Entry Wire Line
-	5900 3850 6000 3750
 Connection ~ 4200 5000
-Wire Wire Line
-	5500 3850 5900 3850
 Wire Wire Line
 	5850 3450 6250 3450
 Wire Wire Line
@@ -931,31 +883,18 @@ Text GLabel 1150 4450 0    50   Input ~ 0
 NMI
 Text GLabel 850  4550 0    50   Input ~ 0
 VCC
-$Comp
-L 65xx:WD65C02_ U2
-U 1 1 60C80A9C
-P 1800 3650
-F 0 "U2" H 1800 4837 60  0000 C CNN
-F 1 "WD65C02_" H 1800 4731 60  0000 C CNN
-F 2 "Package_DIP:DIP-40_W15.24mm_Socket" H 1250 3850 60  0001 C CNN
-F 3 "" H 1250 3850 60  0000 C CNN
-	1    1800 3650
-	1    0    0    -1  
-$EndComp
 Text GLabel 2450 4350 2    50   Input ~ 0
 PHI2
 Text GLabel 3000 4550 0    50   Input ~ 0
 ROM_CS
-Text GLabel 2400 6000 1    50   Input ~ 0
-ROM_CS
 Text GLabel 6850 6050 2    50   Input ~ 0
 VIA1_CS2
-Text GLabel 6350 3750 0    50   Input ~ 0
+Text GLabel 6250 3750 0    50   Input ~ 0
 VIA1_CS2
 Text GLabel 6250 3950 0    50   Input ~ 0
 IRQ
 Entry Wire Line
-	6000 3750 6100 3650
+	5800 3750 5900 3650
 Text GLabel 6250 3550 0    50   Input ~ 0
 PHI2
 Text GLabel 7550 5850 0    50   Input ~ 0
@@ -964,8 +903,6 @@ Text GLabel 7550 3950 2    50   Input ~ 0
 VCC
 Text GLabel 8800 2150 0    50   Input ~ 0
 VCC
-Text GLabel 5500 3650 2    50   Input ~ 0
-SRAM_CS
 Text GLabel 4550 5900 2    50   Input ~ 0
 SRAM_CS
 Text GLabel 3000 4350 0    50   Input ~ 0
@@ -981,7 +918,7 @@ Wire Bus Line
 Wire Bus Line
 	10250 2400 10250 5000
 Wire Bus Line
-	4200 5000 6000 5000
+	4200 5000 5800 5000
 Connection ~ 11850 2400
 Connection ~ 6000 5000
 Wire Bus Line
@@ -1037,23 +974,12 @@ Connection ~ 5000 2550
 Wire Wire Line
 	3550 2550 3400 2550
 Connection ~ 3400 2550
-Wire Wire Line
-	850  3750 1150 3750
-Wire Wire Line
-	850  3750 850  3950
-Connection ~ 850  4550
-Wire Wire Line
-	1150 3950 850  3950
-Connection ~ 850  3950
-Wire Wire Line
-	850  3950 850  4550
 Text GLabel 2350 1950 0    50   Input ~ 0
 NMI
 Wire Wire Line
 	2650 1850 2650 1950
 Text GLabel 700  750  0    50   Input ~ 0
 VCC
-NoConn ~ 8150 4550
 $Comp
 L Device:R_Small R1
 U 1 1 61612694
@@ -1142,10 +1068,8 @@ Text Label 12050 3150 2    50   ~ 0
 a14
 Text Label 12050 3250 2    50   ~ 0
 a15
-Text Label 6050 2350 0    50   ~ 0
+Text Label 6100 2450 0    50   ~ 0
 a2
-Wire Bus Line
-	6000 2450 6000 2100
 Wire Bus Line
 	6000 2100 5750 2100
 Connection ~ 5750 2100
@@ -1178,12 +1102,12 @@ Entry Wire Line
 Entry Wire Line
 	11850 1650 11950 1750
 $Comp
-L Connector:Conn_01x40_Female J1
+L Connector_Generic:Conn_02x40_Top_Bottom J1
 U 1 1 60CB60A2
 P 12550 3650
 F 0 "J1" H 12578 3626 50  0000 L CNN
-F 1 "Conn_01x40_Female" H 12578 3535 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x40_P2.54mm_Vertical" H 12550 3650 50  0001 C CNN
+F 1 "Conn_02x40_Female" H 12578 3535 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x40_P2.54mm_Vertical" H 12550 3650 50  0001 C CNN
 F 3 "~" H 12550 3650 50  0001 C CNN
 	1    12550 3650
 	1    0    0    -1  
@@ -1356,29 +1280,7 @@ Connection ~ 3200 900
 Wire Wire Line
 	3200 900  3200 950 
 Wire Wire Line
-	7550 2950 8550 2950
-Wire Wire Line
-	7550 3050 8550 3050
-Wire Wire Line
 	7550 2650 8550 2650
-Wire Wire Line
-	7550 3450 8550 3450
-$Comp
-L 74xx:74HC00 U3
-U 1 1 60C7A95A
-P 6550 5450
-F 0 "U3" H 6550 5775 50  0000 C CNN
-F 1 "74HC00" H 6550 5684 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 5450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 6550 5450 50  0001 C CNN
-	1    6550 5450
-	1    0    0    -1  
-$EndComp
-Text GLabel 6250 5350 0    50   Input ~ 0
-VCC
-Text GLabel 6250 5550 0    50   Input ~ 0
-VCC
-NoConn ~ 6850 5450
 NoConn ~ -3200 900 
 NoConn ~ -300 5200
 $Comp
@@ -1392,221 +1294,11 @@ F 3 "" H 6400 3150 60  0000 C CNN
 	1    6900 2950
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Display_Character:WC1602A U7
-U 1 1 611F54F7
-P 8950 3050
-F 0 "U7" H 8950 2161 50  0000 C CNN
-F 1 "WC1602A" H 8950 2070 50  0000 C CNN
-F 2 "Display:WC1602A" H 8950 2150 50  0001 C CNN
-F 3 "" H 9050 2950 50  0001 C CNN
-	1    8950 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 60DBE982
-P 14500 2750
-F 0 "R7" V 14400 2750 50  0000 C CNN
-F 1 "1k" V 14500 2750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 14430 2750 50  0001 C CNN
-F 3 "~" H 14500 2750 50  0001 C CNN
-	1    14500 2750
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 60DBE96E
-P 14500 2550
-F 0 "R6" V 14400 2550 50  0000 C CNN
-F 1 "1k" V 14500 2550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 14430 2550 50  0001 C CNN
-F 3 "~" H 14500 2550 50  0001 C CNN
-	1    14500 2550
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 60DB1CDA
-P 14500 2350
-F 0 "R5" V 14400 2350 50  0000 C CNN
-F 1 "1k" V 14500 2350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 14430 2350 50  0001 C CNN
-F 3 "~" H 14500 2350 50  0001 C CNN
-	1    14500 2350
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 60DA48F4
-P 14500 2150
-F 0 "R4" V 14400 2150 50  0000 C CNN
-F 1 "1k" V 14500 2150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 14430 2150 50  0001 C CNN
-F 3 "~" H 14500 2150 50  0001 C CNN
-	1    14500 2150
-	0    -1   1    0   
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 60D8564D
-P 14500 1950
-F 0 "R3" V 14400 1950 50  0000 C CNN
-F 1 "1k" V 14500 1950 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 14430 1950 50  0001 C CNN
-F 3 "~" H 14500 1950 50  0001 C CNN
-	1    14500 1950
-	0    -1   1    0   
-$EndComp
 Wire Bus Line
 	10600 950  5750 950 
-Connection ~ 15450 2550
-Wire Wire Line
-	15450 2750 15450 2550
-Wire Wire Line
-	15450 2350 15450 2150
-Connection ~ 15450 2350
-Wire Wire Line
-	15450 2150 15450 1950
-Connection ~ 15450 2150
-Wire Wire Line
-	15450 2550 15450 2350
-$Comp
-L Switch:SW_Push SW6
-U 1 1 60DBE98C
-P 15250 2750
-F 0 "SW6" H 15250 2900 50  0000 C CNN
-F 1 "SWA" H 15250 2874 50  0001 C CNN
-F 2 "Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR" H 15250 2950 50  0001 C CNN
-F 3 "~" H 15250 2950 50  0001 C CNN
-	1    15250 2750
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW5
-U 1 1 60DBE978
-P 15250 2550
-F 0 "SW5" H 15250 2700 50  0000 C CNN
-F 1 "SWA" H 15250 2674 50  0001 C CNN
-F 2 "Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR" H 15250 2750 50  0001 C CNN
-F 3 "~" H 15250 2750 50  0001 C CNN
-	1    15250 2550
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW4
-U 1 1 60DB1CE4
-P 15250 2350
-F 0 "SW4" H 15250 2500 50  0000 C CNN
-F 1 "SWA" H 15250 2474 50  0001 C CNN
-F 2 "Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR" H 15250 2550 50  0001 C CNN
-F 3 "~" H 15250 2550 50  0001 C CNN
-	1    15250 2350
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW3
-U 1 1 60DA48FE
-P 15250 2150
-F 0 "SW3" H 15250 2300 50  0000 C CNN
-F 1 "SWA" H 15250 2274 50  0001 C CNN
-F 2 "Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR" H 15250 2350 50  0001 C CNN
-F 3 "~" H 15250 2350 50  0001 C CNN
-	1    15250 2150
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW2
-U 1 1 60D84606
-P 15250 1950
-F 0 "SW2" H 15250 2100 50  0000 C CNN
-F 1 "SWA" H 15250 2074 50  0001 C CNN
-F 2 "Button_Switch_THT:SW_Tactile_Straight_KSA0Axx1LFTR" H 15250 2150 50  0001 C CNN
-F 3 "~" H 15250 2150 50  0001 C CNN
-	1    15250 1950
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 2450 7950 2450
-Wire Wire Line
-	15050 1950 14700 1950
-Wire Wire Line
-	15050 2150 14800 2150
-Wire Wire Line
-	14650 2750 15050 2750
-Text GLabel 15100 1800 1    50   Input ~ 0
-B5
-Text GLabel 15000 1800 1    50   Input ~ 0
-B4
-Text GLabel 14900 1800 1    50   Input ~ 0
-B3
-Text GLabel 14800 1800 1    50   Input ~ 0
-B2
-Text GLabel 14700 1800 1    50   Input ~ 0
-B1
-Wire Wire Line
-	14700 1800 14700 1950
-Connection ~ 14700 1950
-Wire Wire Line
-	14700 1950 14650 1950
-Wire Wire Line
-	14800 1800 14800 2150
-Connection ~ 14800 2150
-Wire Wire Line
-	14800 2150 14650 2150
-Wire Wire Line
-	14900 1800 14900 2350
-Wire Wire Line
-	14650 2350 14900 2350
-Connection ~ 14900 2350
-Wire Wire Line
-	14900 2350 15050 2350
-Wire Wire Line
-	15000 1800 15000 2550
-Wire Wire Line
-	14650 2550 15000 2550
-Connection ~ 15000 2550
-Wire Wire Line
-	15000 2550 15050 2550
-Wire Wire Line
-	15100 1800 15100 2750
-Wire Wire Line
-	15100 2750 15050 2750
-Connection ~ 15050 2750
-Wire Wire Line
-	14350 1950 14350 2150
-Connection ~ 14350 2150
-Wire Wire Line
-	14350 2150 14350 2350
-Connection ~ 14350 2350
-Wire Wire Line
-	14350 2350 14350 2550
-Connection ~ 14350 2550
-Wire Wire Line
-	14350 2550 14350 2750
 Text GLabel 12350 5550 0    50   Input ~ 0
 VCC
-Text GLabel 14350 1950 0    50   Input ~ 0
-VCC
-Text GLabel 15450 1950 2    50   Input ~ 0
-GND
-Text GLabel 7550 2550 2    50   Input ~ 0
-B5
-Text GLabel 7550 2450 2    50   Input ~ 0
-B4
-Text GLabel 7550 2350 2    50   Input ~ 0
-B3
-Text GLabel 7550 2250 2    50   Input ~ 0
-B2
-Text GLabel 7550 2150 2    50   Input ~ 0
-B1
-NoConn ~ 1150 4150
-NoConn ~ 1150 3650
-NoConn ~ 1150 3550
-NoConn ~ 1150 3850
 NoConn ~ -1500 2900
-NoConn ~ 5100 7500
-NoConn ~ 14350 5350
 NoConn ~ 21850 4750
 Wire Wire Line
 	9350 2850 9650 2850
@@ -1615,67 +1307,6 @@ Wire Wire Line
 	9650 2850 9650 3850
 Text GLabel 9350 2750 2    50   Input ~ 0
 VCC
-$Comp
-L Oscillator:ACO-xxxMHz X?
-U 1 1 60D4CD6C
-P 6750 10200
-F 0 "X?" H 6550 10250 50  0000 R CNN
-F 1 "1.8432mhz" H 6550 10150 50  0000 R CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7200 9850 50  0001 C CNN
-F 3 "http://www.conwin.com/datasheets/cx/cx030.pdf" H 6650 10200 50  0001 C CNN
-	1    6750 10200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 60D4CD76
-P 6750 10600
-F 0 "#PWR?" H 6750 10350 50  0001 C CNN
-F 1 "GND" H 6755 10427 50  0000 C CNN
-F 2 "" H 6750 10600 50  0001 C CNN
-F 3 "" H 6750 10600 50  0001 C CNN
-	1    6750 10600
-	1    0    0    -1  
-$EndComp
-Text GLabel 6750 9750 1    50   Input ~ 0
-VCC
-Wire Wire Line
-	6750 10500 6750 10600
-Text GLabel 7050 10200 2    50   Input ~ 0
-ACIACLK
-Connection ~ 6750 9850
-Wire Wire Line
-	6750 9850 6750 9900
-Wire Wire Line
-	6750 9750 6750 9850
-Wire Wire Line
-	6100 9850 6750 9850
-Wire Wire Line
-	6100 10150 6100 10250
-Wire Wire Line
-	6100 9950 6100 9850
-$Comp
-L power:GND #PWR?
-U 1 1 60D4CDA4
-P 6100 10250
-F 0 "#PWR?" H 6100 10000 50  0001 C CNN
-F 1 "GND" H 6105 10077 50  0000 C CNN
-F 2 "" H 6100 10250 50  0001 C CNN
-F 3 "" H 6100 10250 50  0001 C CNN
-	1    6100 10250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 60D4CD9A
-P 6100 10050
-F 0 "C?" H 6200 10150 50  0000 L CNN
-F 1 "0.1uf" H 6150 9900 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 6138 9900 50  0001 C CNN
-F 3 "~" H 6100 10050 50  0001 C CNN
-	1    6100 10050
-	1    0    0    -1  
-$EndComp
 Text GLabel 4350 10850 0    50   Input ~ 0
 a1
 Text GLabel 4350 10750 0    50   Input ~ 0
@@ -1684,8 +1315,6 @@ Text GLabel 5650 10850 2    50   Input ~ 0
 VCC
 NoConn ~ 4350 9950
 NoConn ~ 4350 10150
-Text GLabel 4350 10050 0    50   Input ~ 0
-ACIACLK
 Text GLabel 4350 9850 0    50   Input ~ 0
 RESET
 Text GLabel 4350 9550 0    50   Input ~ 0
@@ -2114,10 +1743,256 @@ Wire Wire Line
 Connection ~ 1400 9250
 Wire Wire Line
 	1400 9250 400  9250
+$Comp
+L Device:C_Small C?
+U 1 1 60D4CD9A
+P 3650 11700
+F 0 "C?" H 3750 11800 50  0000 L CNN
+F 1 "0.1uf" H 3700 11550 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 3688 11550 50  0001 C CNN
+F 3 "~" H 3650 11700 50  0001 C CNN
+	1    3650 11700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60D4CDA4
+P 3650 11900
+F 0 "#PWR?" H 3650 11650 50  0001 C CNN
+F 1 "GND" H 3655 11727 50  0000 C CNN
+F 2 "" H 3650 11900 50  0001 C CNN
+F 3 "" H 3650 11900 50  0001 C CNN
+	1    3650 11900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 11600 3650 11500
+Wire Wire Line
+	3650 11800 3650 11900
+Wire Wire Line
+	3650 11500 4300 11500
+Wire Wire Line
+	4300 11400 4300 11500
+Wire Wire Line
+	4300 11500 4300 11550
+Connection ~ 4300 11500
+Wire Wire Line
+	4300 12150 4300 12250
+Text GLabel 4300 11400 1    50   Input ~ 0
+VCC
+$Comp
+L power:GND #PWR?
+U 1 1 60D4CD76
+P 4300 12250
+F 0 "#PWR?" H 4300 12000 50  0001 C CNN
+F 1 "GND" H 4305 12077 50  0000 C CNN
+F 2 "" H 4300 12250 50  0001 C CNN
+F 3 "" H 4300 12250 50  0001 C CNN
+	1    4300 12250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Oscillator:ACO-xxxMHz X?
+U 1 1 60D4CD6C
+P 4300 11850
+F 0 "X?" H 4100 11900 50  0000 R CNN
+F 1 "1.8432mhz" H 4100 11800 50  0000 R CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4750 11500 50  0001 C CNN
+F 3 "http://www.conwin.com/datasheets/cx/cx030.pdf" H 4200 11850 50  0001 C CNN
+	1    4300 11850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 10050 3750 10050
+Wire Wire Line
+	3750 10050 3750 11050
+Wire Wire Line
+	3750 11050 4800 11050
+Wire Wire Line
+	4800 11050 4800 11850
+Wire Wire Line
+	4800 11850 4600 11850
+NoConn ~ 7550 2550
+NoConn ~ 7550 2450
+NoConn ~ 7550 2350
+NoConn ~ 7550 2250
+NoConn ~ 7550 2150
+Connection ~ 5800 5000
+Wire Bus Line
+	5800 5000 6000 5000
+Entry Wire Line
+	5800 3950 5700 3850
+Wire Wire Line
+	5500 3850 5700 3850
+Wire Wire Line
+	5900 3650 6250 3650
+Text GLabel 8150 2450 1    50   Input ~ 0
+DISPE
+Wire Wire Line
+	7950 2450 8550 2450
+Wire Wire Line
+	6250 2550 6100 2550
+Wire Wire Line
+	6100 2450 6250 2450
+Wire Wire Line
+	6100 2350 6250 2350
+Wire Wire Line
+	6100 2250 6250 2250
+$Comp
+L Display_Character:WC1602A U7
+U 1 1 611F54F7
+P 8950 3050
+F 0 "U7" H 8950 2161 50  0000 C CNN
+F 1 "WC1602A" H 8950 2070 50  0000 C CNN
+F 2 "Display:WC1602A" H 8950 2150 50  0001 C CNN
+F 3 "" H 9050 2950 50  0001 C CNN
+	1    8950 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3650 8550 3650
+Wire Wire Line
+	7550 3550 8550 3550
+Wire Wire Line
+	7550 3450 8550 3450
+Wire Wire Line
+	7550 3350 8550 3350
+Wire Wire Line
+	7550 3250 8550 3250
+Wire Wire Line
+	7550 3150 8550 3150
+Wire Wire Line
+	7550 3050 8550 3050
+Wire Wire Line
+	7550 2950 8550 2950
+$Comp
+L Device:R R?
+U 1 1 60FF0D91
+P 600 4200
+F 0 "R?" V 500 4200 50  0000 C CNN
+F 1 "3.3k" V 600 4200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 530 4200 50  0001 C CNN
+F 3 "~" H 600 4200 50  0001 C CNN
+	1    600  4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 611474CF
+P 800 4200
+F 0 "R?" V 700 4200 50  0000 C CNN
+F 1 "3.3k" V 800 4200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 730 4200 50  0001 C CNN
+F 3 "~" H 800 4200 50  0001 C CNN
+	1    800  4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	600  4350 800  4350
+Wire Wire Line
+	850  4550 850  4350
+Wire Wire Line
+	850  4350 800  4350
+Connection ~ 850  4550
+Connection ~ 800  4350
+Wire Wire Line
+	800  4050 800  3950
+Wire Wire Line
+	800  3950 1150 3950
+Wire Wire Line
+	600  3750 1150 3750
+Text GLabel 600  3750 1    50   Input ~ 0
+READY
+Text GLabel 800  3950 1    50   Input ~ 0
+BE
+Text GLabel 12350 4650 0    50   Input ~ 0
+READY
+Text GLabel 12350 4750 0    50   Input ~ 0
+BE
+Wire Wire Line
+	600  3750 600  4050
+Text GLabel 1150 3550 0    50   Input ~ 0
+SYNC
+Text GLabel 1150 3650 0    50   Input ~ 0
+ML
+Text GLabel 12350 4850 0    50   Input ~ 0
+SYNC
+Text GLabel 12350 4950 0    50   Input ~ 0
+ML
+Text GLabel 1150 3850 0    50   Input ~ 0
+VP
+Text GLabel 12350 5050 0    50   Input ~ 0
+VP
+Text GLabel 1150 4150 0    50   Input ~ 0
+SO
+Text GLabel 12350 5150 0    50   Input ~ 0
+SO
+$Comp
+L 65xx:WD65C02_ U2
+U 1 1 60C80A9C
+P 1800 3650
+F 0 "U2" H 1800 4837 60  0000 C CNN
+F 1 "WD65C02_" H 1800 4731 60  0000 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm_Socket" H 1250 3850 60  0001 C CNN
+F 3 "" H 1250 3850 60  0000 C CNN
+	1    1800 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 2450 4450 2    50   Input ~ 0
+PHI2O
+Text GLabel 2450 4550 2    50   Input ~ 0
+PHI1O
+Text GLabel 12350 5250 0    50   Input ~ 0
+PHI1O
+Text GLabel 12350 5350 0    50   Input ~ 0
+PHI2O
+NoConn ~ 4000 6650
+NoConn ~ 4000 6850
+Text GLabel 5500 3650 2    50   Input ~ 0
+SRAM_CS
+Wire Wire Line
+	1600 6000 1600 6100
+Wire Wire Line
+	1600 6100 1750 6100
+Connection ~ 1600 6000
+Wire Wire Line
+	1600 5900 1600 6000
+Wire Wire Line
+	1750 5900 1600 5900
+Text Label 5700 3850 2    50   ~ 0
+a14
+Text GLabel 2400 6000 1    50   Input ~ 0
+ROM_CS
+$Comp
+L 74xx:74HC00 U3
+U 4 1 60C45A6C
+P 2050 6000
+F 0 "U3" H 2050 6325 50  0000 C CNN
+F 1 "74HC00" H 2050 6234 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2050 6000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 2050 6000 50  0001 C CNN
+	4    2050 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC00 U3
+U 1 1 60C7A95A
+P 4300 6750
+F 0 "U3" H 4300 7075 50  0000 C CNN
+F 1 "74HC00" H 4300 6984 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4300 6750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hc00" H 4300 6750 50  0001 C CNN
+	1    4300 6750
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	5800 3750 5800 5000
 Wire Bus Line
 	11850 3600 11850 3950
 Wire Bus Line
 	11850 3250 11850 3600
+Wire Bus Line
+	6000 2100 6000 2450
 Wire Bus Line
 	11850 2400 11850 3150
 Wire Bus Line
