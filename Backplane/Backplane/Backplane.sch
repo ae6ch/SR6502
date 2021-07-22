@@ -16,7 +16,7 @@ $EndDescr
 Entry Wire Line
 	900  700  1000 800 
 $Comp
-L Connector_Generic:Conn_02x40_Counter_Clockwise J1
+L Connector_Generic:Conn_02x40_Odd_Even J1
 U 1 1 60E8A2E4
 P 1300 2700
 F 0 "J1" H 1350 4817 50  0000 C CNN
@@ -507,7 +507,7 @@ Wire Wire Line
 Entry Wire Line
 	2150 700  2250 800 
 $Comp
-L Connector_Generic:Conn_02x40_Counter_Clockwise J2
+L Connector_Generic:Conn_02x40_Odd_Even J2
 U 1 1 60F0B856
 P 2550 2700
 F 0 "J2" H 2600 4817 50  0000 C CNN
@@ -998,7 +998,7 @@ Wire Wire Line
 Entry Wire Line
 	3350 700  3450 800 
 $Comp
-L Connector_Generic:Conn_02x40_Counter_Clockwise J3
+L Connector_Generic:Conn_02x40_Odd_Even J3
 U 1 1 60F251FE
 P 3750 2700
 F 0 "J3" H 3800 4817 50  0000 C CNN
@@ -1489,7 +1489,7 @@ Wire Wire Line
 Entry Wire Line
 	4600 700  4700 800 
 $Comp
-L Connector_Generic:Conn_02x40_Counter_Clockwise J4
+L Connector_Generic:Conn_02x40_Odd_Even J4
 U 1 1 60F252F8
 P 5000 2700
 F 0 "J4" H 5050 4817 50  0000 C CNN
@@ -1980,7 +1980,7 @@ Wire Wire Line
 Entry Wire Line
 	5900 700  6000 800 
 $Comp
-L Connector_Generic:Conn_02x40_Counter_Clockwise J5
+L Connector_Generic:Conn_02x40_Odd_Even J5
 U 1 1 60F652B0
 P 6300 2700
 F 0 "J5" H 6350 4817 50  0000 C CNN
@@ -2471,7 +2471,7 @@ Wire Wire Line
 Entry Wire Line
 	7150 700  7250 800 
 $Comp
-L Connector_Generic:Conn_02x40_Counter_Clockwise J6
+L Connector_Generic:Conn_02x40_Odd_Even J6
 U 1 1 60F653AA
 P 7550 2700
 F 0 "J6" H 7600 4817 50  0000 C CNN
@@ -2962,7 +2962,7 @@ Wire Wire Line
 Entry Wire Line
 	8350 700  8450 800 
 $Comp
-L Connector_Generic:Conn_02x40_Counter_Clockwise J7
+L Connector_Generic:Conn_02x40_Odd_Even J7
 U 1 1 60F654A4
 P 8750 2700
 F 0 "J7" H 8800 4817 50  0000 C CNN
@@ -3964,7 +3964,7 @@ Connection ~ 4250 4850
 Wire Bus Line
 	4250 4850 4600 4850
 $Comp
-L Connector_Generic:Conn_02x40_Counter_Clockwise J8
+L Connector_Generic:Conn_02x40_Odd_Even J8
 U 1 1 61AB8D58
 P 10000 2700
 F 0 "J8" H 10050 4817 50  0000 C CNN
